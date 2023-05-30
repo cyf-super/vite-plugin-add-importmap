@@ -1,22 +1,38 @@
 {
   "name": "vite-plugin-add-importmap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A vite plugin adding importmap to HTML file",
-  "types": "dist/main.d.ts",
-  "main": "./src/main.ts",
+  "author": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
-    "build": "rimraf dist/ && tsup src/main.ts --dts --no-splitting",
+    "build": "tsup",
     "release:major": "standard-version -- --release-as major",
     "release:minor": "standard-version -- --release-as minor",
     "release:patch": "standard-version -- --release-as patch"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "keywords": [
     "vite",
     "importmap",
     "cdn"
   ],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyf-super/vite-plugin-add-importmap",
+    "directory": "src"
+  },
   "dependencies": {
     "typescript": "^5.0.4",
     "vite": "^4.3.9"
@@ -26,5 +42,8 @@
     "rimraf": "^5.0.1",
     "standard-version": "^9.5.0",
     "tsup": "^6.7.0"
+  },
+  "peerDependencies": {
+    "vite": ">=2.5.0"
   }
 }
