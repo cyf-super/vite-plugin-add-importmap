@@ -1,9 +1,10 @@
 {
   "name": "vite-plugin-add-importmap",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "description": "A vite plugin adding importmap to HTML file",
-  "author": "",
-  "license": "ISC",
+  "author": "CYF",
+  "license": "MIT",
+  "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "exports": {
@@ -21,7 +22,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "src"
   ],
   "keywords": [
     "vite",
@@ -39,7 +41,6 @@
   },
   "devDependencies": {
     "@types/node": "^20.2.5",
-    "rimraf": "^5.0.1",
     "standard-version": "^9.5.0",
     "tsup": "^6.7.0"
   },
